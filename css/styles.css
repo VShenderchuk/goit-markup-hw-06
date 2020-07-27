@@ -1011,6 +1011,11 @@
      .form-field {
         position: relative;
         margin-bottom: 28px;
+        width: 100%;
+     }
+     .form-field:focus-within >.form-icon {
+         fill: var(--accent-color);
+
      }
      .form-input {
         width: 448px;
@@ -1030,7 +1035,9 @@
          transform: translateY(-50px);
          color: var(--accent-color);
      }
-     
+     .form-input:focus +.form-icon {
+         fill: var(--accent-color);
+     }
      .form-label {
         position: absolute;
         top: 50%;
@@ -1049,7 +1056,7 @@
      .icon-close {
         width: 11px;
         height: 11px;
-        fill: currentColor;
+        fill: var(--title-text-color);
      }
      .form-icon {
         position: absolute;
@@ -1064,7 +1071,12 @@
      .form-field-comment {
         position: relative;
         margin-bottom: 20px;
+        width: 100%;
      }
+     .form-field-comment:focus {
+        outline: none;
+     }
+
      .proposition {
         resize: none;
         width: 448px;
@@ -1117,6 +1129,14 @@
         margin-right: 4px;
         margin-left: 4px;
         color: var(--accent-color);
+     }
+     .checkbox:checked + .check-mark {
+         background-image: url(../images/markcheck.svg);
+         background-size: contain;
+         background-origin: border-box;
+         background-color: var(--accent-color);
+         
+
      }
      .send {
         display: inline-block;
