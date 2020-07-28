@@ -309,7 +309,7 @@
                     <form class="footer-form">
                         <div class="mail-form">
                             <input class="input-mail" type="email" name="male" placeholder="E-mail">
-                            <button type="submit" class="mail-button">
+                            <button type="submit" class="mail-button" data-open-modal>
                                 Подписаться
                                 <svg class="social-icon-fly" width="24px" height="24px">
                                     <use href="./images/symbol-defs.svg#fly">
@@ -322,6 +322,59 @@
             </div>
         </div>
     </footer>
+    
+    <!--Popup-->
+    <div class="backdrop is hidden" data-backdrop>
+        <div class="modal">
+            <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+            <button data-close-modal class="button-close">
+                <svg class="icon-close">
+                    <use href="./images/symbol-defs.svg#close-icon">
+                    </use>
+                </svg>
+            </button>
+            <form class="form-servise">
+                <div class="form-field">
+                    <input type="text" class="form-input" name="user-name" id="user-name" placeholder=" ">
+                    <label for="user-name" class="form-label">Имя</label>
+                    <svg class="form-icon">
+                        <use href="./images/symbol-defs.svg#name-form">
+                        </use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <input type="tel" class="form-input" name="telephone" id="telephone" placeholder=" ">
+                    <label for="telephone" class="form-label">Телефон</label>
+                    <svg class="form-icon">
+                        <use href="./images/symbol-defs.svg#phone-form">
+                        </use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <input type="email" class="form-input" name="mail" id="mail" placeholder=" ">
+                    <label for="mail" class="form-label">Почта</label>
+                    <svg class="form-icon">
+                        <use href="./images/symbol-defs.svg#email-form">
+                        </use>
+                    </svg>
+                </div>
+                <div class="form-field-comment">
+                    <textarea class="proposition" name="comment" id="comment" rows="6" placeholder=" "></textarea>
+                    <label for="comment" class="form-label-2">Комментарий</label>
+                </div>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox" name="policy">
+                    <span class="check-mark"></span>
+                    Соглашаюсь с рассылкой и принимаю
+                    <a href="">Условия договора</a>
+                </label>
+                <button type="submit" class="send">Отправить</button>
+            </form>
+
+        </div>
+
+    </div>
+    <script type="text/javascript" src="./js/modal.js"></script> 
 </body>
 
 </html>
