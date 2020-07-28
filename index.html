@@ -71,7 +71,7 @@
                     для вашего бизнеса
                 </h1>
                 <div class="hero-button">
-                    <a href="" class="button-primery">Заказать услугу</a>
+                    <a href="" class="button-primery" data-open-modal>Заказать услугу</a>
                 </div>
             </div>
         </section>
@@ -497,10 +497,10 @@
     </footer>
 
 <!--Popup-->
-<div class="backdrop" data-model>
+<div class="backdrop is hidden" data-backdrop>
     <div class="modal">
-        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-        <button data-model-close type="button" class="button-close">
+        <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+        <button data-close-modal class="button-close">
             <svg class="icon-close">
                 <use href="./images/symbol-defs.svg#close-icon">
                 </use>
@@ -547,15 +547,6 @@
     </div>
 
 </div>
-<!--Fihed header-->
-    <script>
-        const { height: pageHeaderHeight } = document
-        .querySelector(*.page-header*) 
-        .getBoundingClientRect();
-        document.body.style.paddingTop = '${pageHeaderHeight}px';
-    </script>
-
-
 <script>
     const refs = {
       openModalBtn: document.querySelector('[data-open-modal]'),
@@ -576,7 +567,7 @@
       console.log('Это клик в бекдроп');
     }
   </script>
- 
+<script src="js/modal.js"></script>
 </body>
 
 </html>
